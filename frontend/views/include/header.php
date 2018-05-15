@@ -20,7 +20,7 @@
             </a>
         </li>
         <li class="">
-            <a title="" href="<?php echo site_url('Login/processLogOut'); ?>">
+            <a title="" href="<?php echo site_url('Logout/out'); ?>">
                 <i class="icon icon-share-alt"></i> <span class="text">注销</span>
             </a>
         </li>
@@ -28,7 +28,5 @@
     </ul>
 </div>
 <!--close-top-Header-menu-->
-
-<?php var_dump($this->session);?>
 
 <?php $this->load->view('include/nav'); ?>

@@ -12,9 +12,11 @@ class User extends Basic_Controller {
 
     }
 
-    public function process( $type, $index = null )
+    public function userProcess( $type, $index = null )
     {
         $data_post  = $this->input->post();
+
+        //var_dump( $data_post ); exit;
 
         switch ($type)
         {
@@ -58,6 +60,7 @@ class User extends Basic_Controller {
                 $user_index = !empty( $data_post['user_index'] ) ? $data_post['user_index'] : $index;
 
                 $info_array = array(
+                    'user_name'     => $data_post['user_name'],
                     'user_nick'     => $data_post['user_nick'],
                     'user_department' => $data_post['user_department'],
                     'user_position' => $data_post['user_position'],

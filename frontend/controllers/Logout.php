@@ -13,14 +13,15 @@ class Logout extends Basic_Controller
     /**
      * 处理用户退出
      */
-    public function processLogOut()
+
+    public function out()
     {
-        /*$session_array = array('user_index', 'user_id', 'user_admin', 'user_rand');
+        $session_array = array('user_index', 'user_id', 'user_admin', 'user_rand');
         $this->session->unset_userdata( $session_array );
 
         if( !isset( $_SESSION['user_index']) )
         {
             jumpAlert('Login', 'Logged out');
-        }*/
+        }
     }
 }

@@ -23,7 +23,7 @@
         </li>
         <li class="submenu"><a href="#"><i class="icon icon-th-list"></i><span>客户管理</span></a>
             <ul>
-                <li><a href="<?php echo site_url('Customer/list'); ?>">客户信息</a></li>
+                <li><a href="<?php echo site_url('Customer/lists'); ?>">客户信息</a></li>
                 <li><a href="<?php echo site_url('Customer/add'); ?>">新增客户</a></li>
             </ul>
         </li>

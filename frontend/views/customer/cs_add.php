@@ -64,9 +64,7 @@
                             <div class="control-group">
                                 <label class="control-label">地址 :</label>
                                 <div class="controls">
-                                    <textarea type="text" name="cs_info_address" id="cs_info_address" class="span11" placeholder="" value ="" >
-
-                                    </textarea>
+                                    <textarea type="text" name="cs_info_address" id="cs_info_address" class="span11" placeholder="" value ="" ></textarea>
                                 </div>
                             </div>
                             <div class="form-actions">

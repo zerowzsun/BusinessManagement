@@ -24,14 +24,14 @@
             <div class="quick-actions_homepage">
                 <ul class="quick-actions">
                     <li class="bg_ly">
-                        <a href="<?=site_url('Waybill/searchWaybillList/?waybill_status=0')?>"><i class="icon-inbox"></i><span class="label label-success">1</span>待办事项</a>
+                        <a href="<?=site_url('Customer/lists')?>"><i class="icon-inbox"></i><span class="label label-success"></span>客户信息</a>
                     </li>
-                    <li class="bg_ly">
-                        <a href="<?=site_url('Waybill/searchWaybillList/?waybill_estimated_time='.time())?>"><i class="icon-tint"></i><span class="label label-success">1</span>待开发票</a>
+                    <!--<li class="bg_ly">
+                        <a href="<?/*=site_url('Waybill/searchWaybillList/?waybill_estimated_time='.time())*/?>"><i class="icon-tint"></i><span class="label label-success">1</span>待开发票</a>
                     </li>
                     <li class="bg_lr">
-                        <a href="<?=site_url('Id/seachIdList')?>"><i class="icon-info-sign"></i><span class="label label-success">1</span>未审核事项</a>
-                    </li>
+                        <a href="<?/*=site_url('Id/seachIdList')*/?>"><i class="icon-info-sign"></i><span class="label label-success">1</span>未审核事项</a>
+                    </li>-->
                 </ul>
             </div>
             <!--

@@ -20,14 +20,25 @@ class Customer_model extends CI_Model
 
         $this->db->trans_complete();
 
-        return $this->db->trans_status;
+        return $this->db->trans_status();
     }
 
-    public function getCustomerList(  )
+    public function getCustomerList( )
     {
         $sql = 'SELECT * FROM customer 
                 LEFT JOIN customer_info ON customer.customer_index = customer_info.customer_index
-                ';
+                WHERE customer.customer_status = 1';
+
+        return $this->db->query( $sql )->result_array();
+    }
+
+    public function getCustomerDetail( $customer_index )
+    {
+        $sql = 'SELECT * FROM customer
+                LEFT JOIN customer_info ON customer.customer_index =  customer_info.customer_index
+                WHERE customer.customer_status = 1 AND customer.customer_index = '.$customer_index;
+
+        return $this->db->query( $sql )->row();
     }
 
 }

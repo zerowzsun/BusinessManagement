@@ -46,7 +46,7 @@
                 <!--
                     <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">Lost password?</a></span>
                 -->
-                <a class="btn btn-success" href="<?php echo site_url('User/create');?>" class="pull-right">注册新用户</a>
+                <!--<a class="btn btn-success" href="<?php /*echo site_url('User/create');*/?>" class="pull-right">注册新用户</a>-->
                 <span class="pull-right"><input class="btn btn-success" type="submit" value="登陆" /></span>
             </div>
         </form>

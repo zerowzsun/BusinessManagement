@@ -21,8 +21,7 @@
                 <div class="span6">
                     <div class="widget-box">
                         <div class="widget-content nopadding">
-                            <form id="user_form" action="<?php echo site_url('User/userDetail/').$user_detail->user_index; ?>" method="post" class="form-horizontal" enctype="multipart/form-data" >
-                                <input type="hidden" name="form_status" value="1" />
+                            <form id="user_form" action="<?php echo site_url('User/userProcess/modify/').$user_detail->user_index; ?>" method="post" class="form-horizontal" enctype="multipart/form-data" >
                                 <input type="hidden" name="user_index" value="<?php echo $user_detail->user_index; ?>" />
                                 <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
                                     <h5>基本信息</h5>

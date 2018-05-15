@@ -78,7 +78,7 @@ class Login extends Basic_Controller {
     }
 
     /**
-     * 注册
+     * 注册页面
      */
     public function register()
     {

@@ -27,18 +27,19 @@ class Customer extends Basic_Controller {
                     'cs_info_contact'   => $data_post['cs_info_contact'],
                     'cs_info_mobile'    => $data_post['cs_info_mobile'],
                     'cs_info_tel'       => $data_post['cs_info_tel'],
-                    'cs_info_mail'      => $data_post['cs_info_name']
+                    'cs_info_mail'      => $data_post['cs_info_mail'],
+                    'cs_info_address'      => $data_post['cs_info_address']
                 );
 
                 $result = $this->customer->createCustomer( $customer_array, $cs_info_array );
 
                 if( $result )
                 {
-                    jumpAlert('customer/list', 'Create Success');
+                    jumpAlert('customer/lists', 'Create Success');
                 }
                 else
                 {
-                    jumpAlert('customer/add', 'Create Failed');
+                    jumpAlert('customer/cs_add', 'Create Failed');
                 }
 
                 break;
@@ -50,7 +51,8 @@ class Customer extends Basic_Controller {
                     'cs_info_contact'   => $data_post['cs_info_contact'],
                     'cs_info_mobile'    => $data_post['cs_info_mobile'],
                     'cs_info_tel'       => $data_post['cs_info_tel'],
-                    'cs_info_mail'      => $data_post['cs_info_name']
+                    'cs_info_mail'      => $data_post['cs_info_mail'],
+                    'cs_info_address'      => $data_post['cs_info_address']
                 );
 
                 $result = $this->customer->modifyCustoerInfo( $cs_info_array, $customer_index );
@@ -71,21 +73,22 @@ class Customer extends Basic_Controller {
 
     public function add()
     {
-        $this->load->view('customer/add');
+        $this->load->view('customer/cs_add');
     }
 
     public function lists()
     {
         $this->data['cs_list'] = $this->customer->getCustomerList();
 
-        $this->load->view('customer/list' ,$this->data);
+        $this->load->view('customer/cs_list' ,$this->data);
     }
 
     public function detail( $customer_index )
     {
-        $this->data['cs_detail'] = $this->customer->getCustomerDetail( $customer_index );
+        $this->data['customer_index']   = $customer_index;
+        $this->data['cs_detail']        = $this->customer->getCustomerDetail( $customer_index );
 
-        $this->load->view('customer/detail', $this->data);
+        $this->load->view('customer/cs_detail', $this->data);
     }
 
 

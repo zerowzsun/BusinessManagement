@@ -22,6 +22,8 @@ class User_model extends CI_Model{
 
     }
 
+
+
     public function insertUser( $user_array, $user_info_array)
     {
         $this->db->trans_start();
